@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="top">
+        <h2>Stopwatch</h2>
+        <p class="hint">Space ▸ Start/Pause · L ▸ Lap · R ▸ Reset</p>
+      </div>
+
+      <div class="round-display" role="timer" aria-live="polite" aria-atomic="true">
+        <div id="display" class="time">00:00.000</div>
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="54"/>
+        </svg>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn btn-start" aria-label="Start stopwatch">Start</button>
+        <button id="lapBtn" class="btn" aria-label="Record lap">Lap</button>
+        <button id="resetBtn" class="btn btn-reset" aria-label="Reset stopwatch">Reset</button>
+      </div>
+
+      <div class="laps-panel">
+        <div class="laps-header">
+          <strong>Laps</strong>
+          <span id="lapsCount">0</span>
+        </div>
+        <ul id="laps" class="laps"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
